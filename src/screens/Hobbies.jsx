@@ -10,9 +10,7 @@ const Hobbies = () => {
 
   return (  
     <>
-      <Container>
         {user !== undefined ? <CardWrapper><p>{user.hobbies}</p></CardWrapper> : <p>Not found</p> }
-      </Container>
     </>
   );
 }

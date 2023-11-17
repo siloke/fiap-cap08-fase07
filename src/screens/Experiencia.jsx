@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import integrantes from "../data/integrantes";
 import CardWrapper from "../components/CardWrapper/CardWrapper";
-import Container from "../components/Container/Container";
 
 const Experiencia = () => {
 
@@ -10,9 +9,7 @@ const Experiencia = () => {
 
   return (  
     <>
-      <Container>
         {user !== undefined ? <CardWrapper><p>{user.experiencia}</p></CardWrapper> : <p>Not found</p> }
-      </Container>
     </>
   );
 }

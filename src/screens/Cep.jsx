@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardWrapper from "../components/CardWrapper/CardWrapper";
-import Container from "../components/Container/Container";
+import { StyledCardWrapper } from "../components/CardWrapper/CardWrapper";
 
 const Cep = () => {
 
@@ -16,14 +15,12 @@ const Cep = () => {
 
     return ( 
         <>
-            <Container>
-                <CardWrapper>
-                    <p>CEP: {endereco.cep}</p>
-                    <p>Localidade: {endereco.localidade} - {endereco.uf}</p>
-                    <p>Bairro: {endereco.bairro}</p>
-                    <p>Logradouro: {endereco.logradouro}</p>
-                </CardWrapper>
-            </Container>
+            <StyledCardWrapper>
+                <p>CEP: {endereco.cep}</p>
+                <p>Localidade: {endereco.localidade} - {endereco.uf}</p>
+                <p>Bairro: {endereco.bairro}</p>
+                <p>Logradouro: {endereco.logradouro}</p>
+            </StyledCardWrapper>
         </>
     );
 }

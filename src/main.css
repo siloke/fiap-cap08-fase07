@@ -12,6 +12,24 @@ body {
 }
 
 #root {
+    width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    margin-right: 8px;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
 }

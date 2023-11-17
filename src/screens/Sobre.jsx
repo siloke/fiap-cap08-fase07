@@ -10,9 +10,7 @@ const Sobre = () => {
 
   return (  
     <>
-      <Container>
         {user !== undefined ? <CardWrapper><p>{user.nome}</p></CardWrapper> : <p>Not found</p> }
-      </Container>
     </>
   );
 }

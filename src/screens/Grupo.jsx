@@ -1,14 +1,14 @@
 import Card from "../components/Card/Card";
-import Container from "../components/Container/Container";
 import integrantes from "../data/integrantes";
+import { Box } from "reflexbox";
 
 const Grupo = () => {
 
     return (  
         <>  
-        <Container>
-            {integrantes.map((integrante) => <Card key={integrante.id} integrante={integrante}></Card>)}
-        </Container>
+            <Box display={"flex"} width={"80%"} justifyContent={"space-between"}>
+                {integrantes.map((integrante) => <Card key={integrante.id} integrante={integrante}></Card>)}
+            </Box>
         </>
     );
 }
