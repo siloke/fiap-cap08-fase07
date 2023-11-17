@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import integrantes from "../data/integrantes";
-import CardWrapper from "../components/CardWrapper/CardWrapper";
-import Container from "../components/Container/Container";
+import StyledCardWrapper from "../components/CardWrapper/CardWrapper";
 
 const Hobbies = () => {
 
@@ -10,7 +9,8 @@ const Hobbies = () => {
 
   return (  
     <>
-        {user !== undefined ? <CardWrapper><p>{user.hobbies}</p></CardWrapper> : <p>Not found</p> }
+        {user !== undefined ?
+          <StyledCardWrapper><p>{user.hobbies}</p></StyledCardWrapper>: <p>Not found</p> }
     </>
   );
 }

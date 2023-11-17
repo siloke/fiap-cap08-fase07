@@ -6,7 +6,7 @@ const Grupo = () => {
 
     return (  
         <>  
-            <Box display={"flex"} width={"80%"} justifyContent={"space-between"}>
+            <Box display={"flex"} flexWrap={"wrap"} width={["100%, 50%"]} justifyContent={"space-evenly"}>
                 {integrantes.map((integrante) => <Card key={integrante.id} integrante={integrante}></Card>)}
             </Box>
         </>

@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import integrantes from "../data/integrantes";
-import CardWrapper from "../components/CardWrapper/CardWrapper";
-import Container from "../components/Container/Container";
+import StyledCardWrapper from "../components/CardWrapper/CardWrapper";
 
 const Sobre = () => {
 
@@ -10,7 +9,13 @@ const Sobre = () => {
 
   return (  
     <>
-        {user !== undefined ? <CardWrapper><p>{user.nome}</p></CardWrapper> : <p>Not found</p> }
+        {user !== undefined ? 
+        <StyledCardWrapper>
+          <h2>{user.nome}</h2>
+          <p>{user.formacao}</p>
+          <p>{user.experiencia}</p>
+        </StyledCardWrapper>        
+         : <p>Not found</p> }
     </>
   );
 }

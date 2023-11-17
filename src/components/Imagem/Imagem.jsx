@@ -8,7 +8,7 @@ const Img = styled.img`
 const Imagem = ( {src} ) => {
     return (
         <>
-            <Img src={src} alt="" />
+            <Img src={src} alt="" width="200px"/>
         </> 
     );
 }

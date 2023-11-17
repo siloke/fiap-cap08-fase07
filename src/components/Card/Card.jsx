@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
-import Headline from "../Headline/Headline";
 import { Box, Flex } from "reflexbox";
 import styled from "styled-components";
 import Imagem from "../Imagem/Imagem";
@@ -16,13 +15,13 @@ const Card = ({ integrante }) => {
 
     return ( 
         <>
-            <StyledCardWrapper mx={"24px"}>
+            <StyledCardWrapper mx={"24px"} my={"24px"}>
                 <Flex flexGrow={1} flexDirection={"column"}>
-                    <Box width={1}>
-                        <Imagem src="public\img\e95ecbe2-fe22-4a16-84dd-6f22a7e5145f.jpg"></Imagem>
-                    </Box>
+                    <Flex width={1} alignItems="center" justifyContent="center">
+                        <Imagem src={integrante.img}></Imagem>
+                    </Flex>
                     <Box mb={"30px"}>
-                        <Headline>{integrante.nome}</Headline>
+                        <h2>{integrante.nome}</h2>
                         <ul>
                             <li><Link to={`/Experiencia/${integrante.id}`}>Experiencia</Link></li>
                             <li><Link to={`/Formacao/${integrante.id}`}>Formacao</Link></li>
